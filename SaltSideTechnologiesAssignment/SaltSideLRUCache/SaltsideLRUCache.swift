@@ -25,7 +25,7 @@ class SaltsideLRUCache<K : Hashable, V> {
         self.capacity = capacity
     }
     
-    //MARK: - Fetch image from cache
+    //MARK: - Fetch value needed from cache
     func get(_ key: K) -> V? {
         guard let nodeToBeUsed = elementsInCache[key] else {
             return nil
@@ -34,7 +34,7 @@ class SaltsideLRUCache<K : Hashable, V> {
         return nodeToBeUsed.value
     }
     
-    //MARK: - Add image to cache
+    //MARK: - Add value to cache
     func put(_ key: K, _ value: V) {
         // Key already exists
         if let existingNode = elementsInCache[key]{
@@ -69,7 +69,7 @@ class SaltsideLRUCache<K : Hashable, V> {
         }
     }
     
-    //MARK: - Check if image is present in cache
+    //MARK: - Check if value is present in cache
     func isValid(key: K) -> Bool {
         return elementsInCache[key] != nil
     }
@@ -78,17 +78,17 @@ class SaltsideLRUCache<K : Hashable, V> {
     private func moveNodeToHeadOfCache(nodeToMove : SaltsideLinkNode<K,V>) {
         
         guard nodeToMove !== head else { return }
-        let previousNodeOfNTM = nodeToMove.prev
-        let nextNodeOfNTM = nodeToMove.next
+        let previousNodeOfNodeToMove = nodeToMove.prev
+        let nextNodeOfNodeToMove = nodeToMove.next
 
-        previousNodeOfNTM?.next = nextNodeOfNTM
-        nextNodeOfNTM?.prev = previousNodeOfNTM
+        previousNodeOfNodeToMove?.next = nextNodeOfNodeToMove
+        nextNodeOfNodeToMove?.prev = previousNodeOfNodeToMove
 
         nodeToMove.next = head
         nodeToMove.prev = nil
 
         if nodeToMove === tail {
-            tail = previousNodeOfNTM
+            tail = previousNodeOfNodeToMove
         }
 
         self.head = nodeToMove
