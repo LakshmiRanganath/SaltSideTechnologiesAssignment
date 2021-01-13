@@ -99,10 +99,13 @@
 		C270791525AF70800092403B /* SaltSideTechnologiesAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				C270794F25AF741A0092403B /* SaltSideLRUCache */,
+				C270794E25AF73FA0092403B /* SaltSideExtensions */,
+				C270794D25AF73CE0092403B /* SaltSideModels */,
+				C270794C25AF73BA0092403B /* SaltSideViews */,
+				C270794B25AF73AC0092403B /* SaltSideViewModel */,
 				C270791625AF70800092403B /* AppDelegate.swift */,
 				C270791825AF70800092403B /* SceneDelegate.swift */,
-				C270791A25AF70800092403B /* ViewController.swift */,
-				C270791C25AF70800092403B /* Main.storyboard */,
 				C270791F25AF70810092403B /* Assets.xcassets */,
 				C270792125AF70810092403B /* LaunchScreen.storyboard */,
 				C270792425AF70810092403B /* Info.plist */,
@@ -126,6 +129,43 @@
 				C270793A25AF70810092403B /* Info.plist */,
 			);
 			path = SaltSideTechnologiesAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		C270794B25AF73AC0092403B /* SaltSideViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaltSideViewModel;
+			sourceTree = "<group>";
+		};
+		C270794C25AF73BA0092403B /* SaltSideViews */ = {
+			isa = PBXGroup;
+			children = (
+				C270791A25AF70800092403B /* ViewController.swift */,
+				C270791C25AF70800092403B /* Main.storyboard */,
+			);
+			path = SaltSideViews;
+			sourceTree = "<group>";
+		};
+		C270794D25AF73CE0092403B /* SaltSideModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaltSideModels;
+			sourceTree = "<group>";
+		};
+		C270794E25AF73FA0092403B /* SaltSideExtensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaltSideExtensions;
+			sourceTree = "<group>";
+		};
+		C270794F25AF741A0092403B /* SaltSideLRUCache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SaltSideLRUCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
