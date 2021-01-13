@@ -19,6 +19,7 @@
 		C270796525AF7A350092403B /* SaltsideLRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270796425AF7A350092403B /* SaltsideLRUCache.swift */; };
 		C270796A25AF7B5B0092403B /* SaltsideConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270796925AF7B5B0092403B /* SaltsideConstants.swift */; };
 		C270796F25AF7BD30092403B /* SaltsideLRUCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270796E25AF7BD30092403B /* SaltsideLRUCacheTests.swift */; };
+		C270797A25AF916F0092403B /* SaltsideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270797925AF916F0092403B /* SaltsideTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C270796425AF7A350092403B /* SaltsideLRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideLRUCache.swift; sourceTree = "<group>"; };
 		C270796925AF7B5B0092403B /* SaltsideConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideConstants.swift; sourceTree = "<group>"; };
 		C270796E25AF7BD30092403B /* SaltsideLRUCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideLRUCacheTests.swift; sourceTree = "<group>"; };
+		C270797925AF916F0092403B /* SaltsideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				C270791A25AF70800092403B /* ViewController.swift */,
 				C270791C25AF70800092403B /* Main.storyboard */,
+				C270797925AF916F0092403B /* SaltsideTableViewCell.swift */,
 			);
 			path = SaltSideViews;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C270791B25AF70800092403B /* ViewController.swift in Sources */,
+				C270797A25AF916F0092403B /* SaltsideTableViewCell.swift in Sources */,
 				C270791725AF70800092403B /* AppDelegate.swift in Sources */,
 				C270796A25AF7B5B0092403B /* SaltsideConstants.swift in Sources */,
 				C270796525AF7A350092403B /* SaltsideLRUCache.swift in Sources */,
