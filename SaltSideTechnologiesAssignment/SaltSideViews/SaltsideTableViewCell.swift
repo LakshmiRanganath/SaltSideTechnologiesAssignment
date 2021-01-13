@@ -12,7 +12,8 @@ class SaltsideTableViewCell : UITableViewCell{
     
     //MARK: - Properties
     
-    @IBOutlet weak var saltsideImageView: UIImageView!
+ 
+    @IBOutlet weak var saltsideImageView: CacheImageView!
     
     @IBOutlet weak var saltsideTitleLabel: UILabel!
     
