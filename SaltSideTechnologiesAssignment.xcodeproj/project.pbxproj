@@ -15,6 +15,10 @@
 		C270792325AF70810092403B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C270792125AF70810092403B /* LaunchScreen.storyboard */; };
 		C270792E25AF70810092403B /* SaltSideTechnologiesAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270792D25AF70810092403B /* SaltSideTechnologiesAssignmentTests.swift */; };
 		C270793925AF70810092403B /* SaltSideTechnologiesAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270793825AF70810092403B /* SaltSideTechnologiesAssignmentUITests.swift */; };
+		C270796025AF79DC0092403B /* SaltsideLinkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270795F25AF79DC0092403B /* SaltsideLinkNode.swift */; };
+		C270796525AF7A350092403B /* SaltsideLRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270796425AF7A350092403B /* SaltsideLRUCache.swift */; };
+		C270796A25AF7B5B0092403B /* SaltsideConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270796925AF7B5B0092403B /* SaltsideConstants.swift */; };
+		C270796F25AF7BD30092403B /* SaltsideLRUCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270796E25AF7BD30092403B /* SaltsideLRUCacheTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		C270793425AF70810092403B /* SaltSideTechnologiesAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaltSideTechnologiesAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C270793825AF70810092403B /* SaltSideTechnologiesAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltSideTechnologiesAssignmentUITests.swift; sourceTree = "<group>"; };
 		C270793A25AF70810092403B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C270795F25AF79DC0092403B /* SaltsideLinkNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideLinkNode.swift; sourceTree = "<group>"; };
+		C270796425AF7A350092403B /* SaltsideLRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideLRUCache.swift; sourceTree = "<group>"; };
+		C270796925AF7B5B0092403B /* SaltsideConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideConstants.swift; sourceTree = "<group>"; };
+		C270796E25AF7BD30092403B /* SaltsideLRUCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideLRUCacheTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +107,11 @@
 		C270791525AF70800092403B /* SaltSideTechnologiesAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				C270794F25AF741A0092403B /* SaltSideLRUCache */,
-				C270794E25AF73FA0092403B /* SaltSideExtensions */,
-				C270794D25AF73CE0092403B /* SaltSideModels */,
 				C270794C25AF73BA0092403B /* SaltSideViews */,
 				C270794B25AF73AC0092403B /* SaltSideViewModel */,
+				C270794D25AF73CE0092403B /* SaltSideModels */,
+				C270794E25AF73FA0092403B /* SaltSideExtensions */,
+				C270794F25AF741A0092403B /* SaltSideLRUCache */,
 				C270791625AF70800092403B /* AppDelegate.swift */,
 				C270791825AF70800092403B /* SceneDelegate.swift */,
 				C270791F25AF70810092403B /* Assets.xcassets */,
@@ -118,6 +126,7 @@
 			children = (
 				C270792D25AF70810092403B /* SaltSideTechnologiesAssignmentTests.swift */,
 				C270792F25AF70810092403B /* Info.plist */,
+				C270796E25AF7BD30092403B /* SaltsideLRUCacheTests.swift */,
 			);
 			path = SaltSideTechnologiesAssignmentTests;
 			sourceTree = "<group>";
@@ -150,6 +159,7 @@
 		C270794D25AF73CE0092403B /* SaltSideModels */ = {
 			isa = PBXGroup;
 			children = (
+				C270796925AF7B5B0092403B /* SaltsideConstants.swift */,
 			);
 			path = SaltSideModels;
 			sourceTree = "<group>";
@@ -164,6 +174,8 @@
 		C270794F25AF741A0092403B /* SaltSideLRUCache */ = {
 			isa = PBXGroup;
 			children = (
+				C270795F25AF79DC0092403B /* SaltsideLinkNode.swift */,
+				C270796425AF7A350092403B /* SaltsideLRUCache.swift */,
 			);
 			path = SaltSideLRUCache;
 			sourceTree = "<group>";
@@ -300,6 +312,9 @@
 			files = (
 				C270791B25AF70800092403B /* ViewController.swift in Sources */,
 				C270791725AF70800092403B /* AppDelegate.swift in Sources */,
+				C270796A25AF7B5B0092403B /* SaltsideConstants.swift in Sources */,
+				C270796525AF7A350092403B /* SaltsideLRUCache.swift in Sources */,
+				C270796025AF79DC0092403B /* SaltsideLinkNode.swift in Sources */,
 				C270791925AF70800092403B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C270792E25AF70810092403B /* SaltSideTechnologiesAssignmentTests.swift in Sources */,
+				C270796F25AF7BD30092403B /* SaltsideLRUCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
