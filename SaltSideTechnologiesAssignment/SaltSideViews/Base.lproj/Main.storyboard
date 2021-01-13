@@ -47,7 +47,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-hE-Gsk">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-hE-Gsk" customClass="CacheImageView" customModule="SaltSideTechnologiesAssignment" customModuleProvider="target">
                                                     <rect key="frame" x="274" y="10" width="89" height="89"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="ySj-hE-Gsk" secondAttribute="height" multiplier="50:50" id="S6Q-lp-wRS"/>
@@ -81,7 +81,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="saltsideDescriptionLabel" destination="s6B-fC-Swg" id="obO-Yz-795"/>
-                                            <outlet property="saltsideImageView" destination="ySj-hE-Gsk" id="pk0-kQ-ILJ"/>
+                                            <outlet property="saltsideImageView" destination="ySj-hE-Gsk" id="1ZA-15-lg0"/>
                                             <outlet property="saltsideTitleLabel" destination="HGb-XE-dFc" id="s6J-0S-31C"/>
                                         </connections>
                                     </tableViewCell>
