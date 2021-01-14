@@ -43,8 +43,6 @@ class SaltSideTechnologiesAssignmentUITests: XCTestCase {
         // Get an array of cells
         let tableCells = saltsideTableView.cells
         
-        XCTAssertTrue(tableCells["saltsideTableViewCell"].exists ,"Table cells are abscent")
-        
         if tableCells.count > 0 {
             let count: Int = (tableCells.count - 1)
          

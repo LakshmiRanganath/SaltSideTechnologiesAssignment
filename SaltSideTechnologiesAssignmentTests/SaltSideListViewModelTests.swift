@@ -27,6 +27,7 @@ class SaltSideListViewModelTests: XCTestCase {
     func testValidCallToAPIsHTTPStatusCode200(forURLString : String) {
       // given
       let url = URL(string: forURLString)
+      //set an expection with the help of promise to get status code = 200
       let promise = expectation(description: "Status code: 200")
 
         let dataTask = URLSession.shared.dataTask(with: url!) { data, response, error in
