@@ -28,8 +28,17 @@ class SaltsideDetailViewController : UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.title = "Details"
+        setAccessibilityIdentifiers()
         populateDetailView()
     }
+    
+    //MARK: - Set accessibilty Identifiers for UITest
+    func setAccessibilityIdentifiers(){
+        saltsideImageView.accessibilityIdentifier = "image--saltsideImageView"
+        saltsideTitleLabel.accessibilityIdentifier = "label--saltsideTitleLabel"
+        saltsideDescriptionLabel.accessibilityIdentifier = "label--saltsideDescriptionLabel"
+    }
+    
     
     //MARK: - Populate detail view
     func populateDetailView(){

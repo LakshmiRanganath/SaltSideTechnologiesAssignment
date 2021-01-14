@@ -41,36 +41,39 @@ class SaltSideTechnologiesAssignmentUITests: XCTestCase {
         
         XCTAssertFalse(tryAgainButton.exists, "TryAgain button is not hidden")
         // Get an array of cells
-        let tableCells = saltsideTableView.cells
+        let tableCells = saltsideTableView.cells.matching(identifier: "saltsideTableViewCell")
+        //First cell
+        let cell = tableCells.element(boundBy: 0)
         
-        if tableCells.count > 0 {
-            let count: Int = (tableCells.count - 1)
-         
-            let promise = expectation(description: "Wait for table cells")
-         
-            for i in 0...count {
-                // Grab the first cell and verify that it exists and tap it
-                let tableCell = tableCells.element(boundBy: i)
-                XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
-                // Does this actually take us to the next screen
-                tableCell.tap()
-         
-                if i == (count - 1) {
-                    promise.fulfill()
-                }
-                // Back
-                app.navigationBars.buttons.element(boundBy: 0).tap()
-            }
-            waitForExpectations(timeout: 20, handler: nil)
-            XCTAssertTrue(true, "Finished validating the table cells")
-         
-        } else {
-            XCTAssert(false, "Was not able to find any table cells")
-        }
+        //Checking for all cell elements
+        let cellTitleLabel = cell.staticTexts["label--cellTitleLabel"]
+        
+        XCTAssertTrue(cellTitleLabel.exists, "The cell title label does not exist")
+        
+        let cellDescriptionLabel = cell.staticTexts["label--cellDescriptionLabel"]
+        
+        XCTAssertTrue(cellDescriptionLabel.exists, "The cell description label does not exist")
+        
+        //Navigate to detail view by tapping cell
+        cell.tap()
         
         
+        //Check for all elements in detail view
+        let saltsideDetailImageView = app.images["image--saltsideImageView"]
         
-     
+        XCTAssertTrue(saltsideDetailImageView.exists, "The saltside detail image does not exist")
+        
+        let saltsideDetailTitleLabel = app.staticTexts["label--saltsideTitleLabel"]
+        
+        XCTAssertTrue(saltsideDetailTitleLabel.exists, "The saltside detail title label does not exist")
+        
+        let saltsideDescriptionLabel = app.staticTexts["label--saltsideDescriptionLabel"]
+        
+        XCTAssertTrue(saltsideDescriptionLabel.exists, "The saltside detail description label does not exist")
+        
+        //Back button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+  
     }
     
     func testExample() throws {
