@@ -8,7 +8,7 @@
 import Foundation
 
 class SaltsideListViewModel : NSObject{
-    var SaltsideList = [SaltSideDataModel]()
+    var saltsideList = [SaltSideDataModel]()
     
     
     func fetchSaltSideList(completion : @escaping(Result<[SaltSideDataModel], Error>) -> ()){
