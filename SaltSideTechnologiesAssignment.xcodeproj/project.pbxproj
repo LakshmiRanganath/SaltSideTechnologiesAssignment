@@ -24,6 +24,9 @@
 		C270799025AFB8040092403B /* SaltSideDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270798F25AFB8040092403B /* SaltSideDataModel.swift */; };
 		C270799525AFB9390092403B /* SaltsideListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270799425AFB9390092403B /* SaltsideListViewModel.swift */; };
 		C270799A25AFBB080092403B /* SaltSideListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C270799925AFBB080092403B /* SaltSideListViewModelTests.swift */; };
+		C27079A525AFD8E70092403B /* SaltsideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27079A425AFD8E70092403B /* SaltsideDetailViewController.swift */; };
+		C27079AA25AFEA110092403B /* SaltsideDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27079A925AFEA110092403B /* SaltsideDetailViewModel.swift */; };
+		C27079B525AFFE660092403B /* SaltsideDetailViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27079B425AFFE660092403B /* SaltsideDetailViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		C270798F25AFB8040092403B /* SaltSideDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltSideDataModel.swift; sourceTree = "<group>"; };
 		C270799425AFB9390092403B /* SaltsideListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideListViewModel.swift; sourceTree = "<group>"; };
 		C270799925AFBB080092403B /* SaltSideListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltSideListViewModelTests.swift; sourceTree = "<group>"; };
+		C27079A425AFD8E70092403B /* SaltsideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideDetailViewController.swift; sourceTree = "<group>"; };
+		C27079A925AFEA110092403B /* SaltsideDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideDetailViewModel.swift; sourceTree = "<group>"; };
+		C27079B425AFFE660092403B /* SaltsideDetailViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltsideDetailViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 				C270792F25AF70810092403B /* Info.plist */,
 				C270796E25AF7BD30092403B /* SaltsideLRUCacheTests.swift */,
 				C270799925AFBB080092403B /* SaltSideListViewModelTests.swift */,
+				C27079B425AFFE660092403B /* SaltsideDetailViewTests.swift */,
 			);
 			path = SaltSideTechnologiesAssignmentTests;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				C270799425AFB9390092403B /* SaltsideListViewModel.swift */,
+				C27079A925AFEA110092403B /* SaltsideDetailViewModel.swift */,
 			);
 			path = SaltSideViewModel;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				C270791A25AF70800092403B /* ViewController.swift */,
 				C270791C25AF70800092403B /* Main.storyboard */,
 				C270797925AF916F0092403B /* SaltsideTableViewCell.swift */,
+				C27079A425AFD8E70092403B /* SaltsideDetailViewController.swift */,
 			);
 			path = SaltSideViews;
 			sourceTree = "<group>";
@@ -331,7 +340,9 @@
 				C270791725AF70800092403B /* AppDelegate.swift in Sources */,
 				C270796A25AF7B5B0092403B /* SaltsideConstants.swift in Sources */,
 				C270799525AFB9390092403B /* SaltsideListViewModel.swift in Sources */,
+				C27079A525AFD8E70092403B /* SaltsideDetailViewController.swift in Sources */,
 				C270796525AF7A350092403B /* SaltsideLRUCache.swift in Sources */,
+				C27079AA25AFEA110092403B /* SaltsideDetailViewModel.swift in Sources */,
 				C270799025AFB8040092403B /* SaltSideDataModel.swift in Sources */,
 				C270796025AF79DC0092403B /* SaltsideLinkNode.swift in Sources */,
 				C270791925AF70800092403B /* SceneDelegate.swift in Sources */,
@@ -344,6 +355,7 @@
 			files = (
 				C270792E25AF70810092403B /* SaltSideTechnologiesAssignmentTests.swift in Sources */,
 				C270796F25AF7BD30092403B /* SaltsideLRUCacheTests.swift in Sources */,
+				C27079B525AFFE660092403B /* SaltsideDetailViewTests.swift in Sources */,
 				C270799A25AFBB080092403B /* SaltSideListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

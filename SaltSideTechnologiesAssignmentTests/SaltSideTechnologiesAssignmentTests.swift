@@ -41,8 +41,7 @@ class SaltSideTechnologiesAssignmentTests: XCTestCase {
                 description:"eye calorie blot airfields certificate conjunction dyes mixture delegate searches junctions age explanation guards cots disks defeat carloads adjective buoy dusts swell customers barrels",
                 title:"talker bean way ride")
             ]
-//        ssMainVCToTest.saltsideTableView.dataSource = ssMainVCToTest
-//        ssMainVCToTest.saltsideTableView.delegate = ssMainVCToTest
+
     }
 
     override func tearDownWithError() throws {
@@ -83,7 +82,6 @@ class SaltSideTechnologiesAssignmentTests: XCTestCase {
             let cell = ssMainVCToTest.tableView(ssMainVCToTest.saltsideTableView, cellForRowAt: IndexPath(row: index, section: 0)) as! SaltsideTableViewCell
             XCTAssertNotNil(cell.saltsideTitleLabel)
             XCTAssertNotNil(cell.saltsideDescriptionLabel)
-            XCTAssertNotNil(cell.saltsideImageView)
             XCTAssertEqual(cell.saltsideTitleLabel.text, ssMainVCToTest.saltSideListViewModel.saltsideList[index].title)
             XCTAssertEqual(cell.saltsideDescriptionLabel.text, ssMainVCToTest.saltSideListViewModel.saltsideList[index].description)
         }

@@ -8,9 +8,12 @@
 import Foundation
 
 class SaltsideListViewModel : NSObject{
+    
+    //MARK: - Properties
     var saltsideList = [SaltSideDataModel]()
     
     
+    //MARK: - Fetch data calls
     func fetchSaltSideList(completion : @escaping(Result<[SaltSideDataModel], Error>) -> ()){
         URLSession.shared.dataTask(with: URL(string : SaltsideConstants.saltsideListUrlString )!){(data, response, error) in
             if (error != nil){

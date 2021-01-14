@@ -41,7 +41,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" systemColor="labelColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saltsideTableViewCell" rowHeight="109" id="6HQ-Cf-kQt" customClass="SaltsideTableViewCell" customModule="SaltSideTechnologiesAssignment" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="saltsideTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saltsideTableViewCell" rowHeight="109" id="6HQ-Cf-kQt" customClass="SaltsideTableViewCell" customModule="SaltSideTechnologiesAssignment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6HQ-Cf-kQt" id="an6-TG-PcP">
@@ -111,6 +111,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="900.00000000000011" y="88.392857142857139"/>
+        </scene>
+        <!--Saltside Detail View Controller-->
+        <scene sceneID="FXx-Y3-7Nm">
+            <objects>
+                <viewController storyboardIdentifier="SaltSideDetailViewController" id="gGC-4W-6P6" customClass="SaltsideDetailViewController" customModule="SaltSideTechnologiesAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHJ-nB-GMf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LiF-KM-0yQ" customClass="CacheImageView" customModule="SaltSideTechnologiesAssignment" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="204.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxG-Pq-wnl">
+                                <rect key="frame" x="20" y="336.5" width="374" height="18.5"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Italic" family="Euphemia UCAS" pointSize="14"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI3-Nc-EKi">
+                                <rect key="frame" x="20" y="288.5" width="374" height="33"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Vn-5a-Osf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sxG-Pq-wnl" firstAttribute="top" secondItem="mI3-Nc-EKi" secondAttribute="bottom" constant="15" id="0is-GZ-YXx"/>
+                            <constraint firstItem="LiF-KM-0yQ" firstAttribute="top" secondItem="5Vn-5a-Osf" secondAttribute="top" constant="20" id="7F6-vw-pFy"/>
+                            <constraint firstItem="LiF-KM-0yQ" firstAttribute="height" secondItem="5Vn-5a-Osf" secondAttribute="height" multiplier="25:100" id="7KA-vs-b3d"/>
+                            <constraint firstItem="LiF-KM-0yQ" firstAttribute="leading" secondItem="5Vn-5a-Osf" secondAttribute="leading" constant="20" id="HKd-ge-3OT"/>
+                            <constraint firstItem="mI3-Nc-EKi" firstAttribute="trailing" secondItem="LiF-KM-0yQ" secondAttribute="trailing" id="a0i-HF-1y6"/>
+                            <constraint firstItem="5Vn-5a-Osf" firstAttribute="trailing" secondItem="LiF-KM-0yQ" secondAttribute="trailing" constant="20" id="f2k-79-RuJ"/>
+                            <constraint firstItem="mI3-Nc-EKi" firstAttribute="leading" secondItem="LiF-KM-0yQ" secondAttribute="leading" id="hGf-4c-8Lq"/>
+                            <constraint firstItem="5Vn-5a-Osf" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sxG-Pq-wnl" secondAttribute="bottom" constant="20" id="k8O-NI-Sh1"/>
+                            <constraint firstItem="sxG-Pq-wnl" firstAttribute="trailing" secondItem="mI3-Nc-EKi" secondAttribute="trailing" id="ocP-5r-clQ"/>
+                            <constraint firstItem="mI3-Nc-EKi" firstAttribute="top" secondItem="LiF-KM-0yQ" secondAttribute="bottom" constant="20" id="r26-Ug-PwS"/>
+                            <constraint firstItem="sxG-Pq-wnl" firstAttribute="leading" secondItem="mI3-Nc-EKi" secondAttribute="leading" id="tLW-oK-3sC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="saltsideDescriptionLabel" destination="sxG-Pq-wnl" id="ReL-Uf-9Sa"/>
+                        <outlet property="saltsideImageView" destination="LiF-KM-0yQ" id="6rH-Qr-t96"/>
+                        <outlet property="saltsideTitleLabel" destination="mI3-Nc-EKi" id="Qtm-vt-Rfd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCp-kD-gTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562.3188405797102" y="-56.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oi1-od-5AI">

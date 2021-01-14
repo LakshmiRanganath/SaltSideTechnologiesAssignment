@@ -143,7 +143,13 @@ extension ViewController : UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        let dataAtCellIndex = saltSideListViewModel.saltsideList[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let dataDetailVC = storyboard.instantiateViewController(withIdentifier: "SaltSideDetailViewController") as! SaltsideDetailViewController
+        dataDetailVC.saltsideDetailViewModel.detailModel = dataAtCellIndex
+        dataDetailVC.isModalInPresentation = true
+        self.navigationController?.pushViewController(dataDetailVC, animated: true)
         
     }
     
