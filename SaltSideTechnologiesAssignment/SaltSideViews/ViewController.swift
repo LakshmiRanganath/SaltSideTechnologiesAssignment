@@ -121,13 +121,7 @@ extension ViewController : UITableViewDataSource{
         let cell : SaltsideTableViewCell = tableView.dequeueReusableCell(withIdentifier: "saltsideTableViewCell", for: indexPath) as! SaltsideTableViewCell
         
         let dataAtCellIndex = saltSideListViewModel.saltsideList[indexPath.row]
-        
-        if dataAtCellIndex.image != "" || dataAtCellIndex.image != nil{
-            cell.saltsideImageView.loadImageViewWithUrlString(urlString: dataAtCellIndex.image!)
-        }
-        else{
-            cell.saltsideImageView.image = UIImage(systemName: "nosign")
-        }
+
         if dataAtCellIndex.title != nil{
             cell.saltsideTitleLabel.text = dataAtCellIndex.title
         }

@@ -23,9 +23,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-n2-BJX">
-                                <rect key="frame" x="182" y="468.5" width="50" height="50"/>
+                                <rect key="frame" x="169" y="468.5" width="76.5" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="GQ0-gp-pRx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="GQ0-gp-pRx"/>
                                     <constraint firstAttribute="height" constant="50" id="IZB-Nq-g2o"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="repeat" catalog="system"/>
@@ -48,41 +48,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-hE-Gsk" customClass="CacheImageView" customModule="SaltSideTechnologiesAssignment" customModuleProvider="target">
-                                                    <rect key="frame" x="274" y="10" width="89" height="89"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ySj-hE-Gsk" secondAttribute="height" multiplier="50:50" id="S6Q-lp-wRS"/>
-                                                    </constraints>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGb-XE-dFc">
-                                                    <rect key="frame" x="40" y="21" width="224" height="33"/>
-                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="25"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGb-XE-dFc">
+                                                    <rect key="frame" x="40" y="16" width="315" height="30.5"/>
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="23"/>
                                                     <color key="textColor" systemColor="systemOrangeColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6B-fC-Swg">
-                                                    <rect key="frame" x="40" y="69" width="224" height="19"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6B-fC-Swg">
+                                                    <rect key="frame" x="40" y="56.5" width="315" height="36.5"/>
+                                                    <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="15"/>
                                                     <color key="textColor" systemColor="systemIndigoColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HGb-XE-dFc" firstAttribute="top" secondItem="an6-TG-PcP" secondAttribute="topMargin" constant="10" id="OGs-uQ-vEY"/>
-                                                <constraint firstItem="ySj-hE-Gsk" firstAttribute="leading" secondItem="s6B-fC-Swg" secondAttribute="trailing" constant="10" id="UgK-m3-xSM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HGb-XE-dFc" secondAttribute="trailing" constant="20" id="R4p-Z0-1aX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="s6B-fC-Swg" secondAttribute="bottom" constant="5" id="VIA-rX-0WH"/>
                                                 <constraint firstItem="HGb-XE-dFc" firstAttribute="leading" secondItem="an6-TG-PcP" secondAttribute="leadingMargin" constant="20" id="Vur-r4-BhC"/>
-                                                <constraint firstAttribute="trailing" secondItem="ySj-hE-Gsk" secondAttribute="trailing" constant="20" id="X9D-0j-bbH"/>
-                                                <constraint firstItem="ySj-hE-Gsk" firstAttribute="leading" secondItem="HGb-XE-dFc" secondAttribute="trailing" constant="10" id="bzg-1c-bLv"/>
                                                 <constraint firstItem="HGb-XE-dFc" firstAttribute="leading" secondItem="s6B-fC-Swg" secondAttribute="leading" id="dW1-iO-2ai"/>
-                                                <constraint firstAttribute="bottom" secondItem="ySj-hE-Gsk" secondAttribute="bottom" constant="10" id="egz-dw-zUs"/>
-                                                <constraint firstItem="s6B-fC-Swg" firstAttribute="top" secondItem="HGb-XE-dFc" secondAttribute="bottom" constant="15" id="w2k-7P-j9m"/>
-                                                <constraint firstItem="ySj-hE-Gsk" firstAttribute="top" secondItem="an6-TG-PcP" secondAttribute="top" constant="10" id="zss-xU-JFK"/>
+                                                <constraint firstItem="HGb-XE-dFc" firstAttribute="top" secondItem="an6-TG-PcP" secondAttribute="topMargin" constant="5" id="lcl-4Y-FbI"/>
+                                                <constraint firstItem="s6B-fC-Swg" firstAttribute="trailing" secondItem="HGb-XE-dFc" secondAttribute="trailing" id="r1o-U6-LAj"/>
+                                                <constraint firstItem="s6B-fC-Swg" firstAttribute="top" secondItem="HGb-XE-dFc" secondAttribute="bottom" constant="10" id="w2k-7P-j9m"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="saltsideDescriptionLabel" destination="s6B-fC-Swg" id="obO-Yz-795"/>
-                                            <outlet property="saltsideImageView" destination="ySj-hE-Gsk" id="1ZA-15-lg0"/>
                                             <outlet property="saltsideTitleLabel" destination="HGb-XE-dFc" id="s6J-0S-31C"/>
                                         </connections>
                                     </tableViewCell>
@@ -96,7 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="COH-pe-5Mk" secondAttribute="trailing" constant="25" id="54b-hA-RTB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="COH-pe-5Mk" secondAttribute="trailing" id="54b-hA-RTB"/>
                             <constraint firstItem="COH-pe-5Mk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="GqS-e4-zFh"/>
                             <constraint firstItem="aDW-Yt-2xj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M7m-3R-ASg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sLq-ra-axV" secondAttribute="bottom" id="Ny0-9l-Ws9"/>
