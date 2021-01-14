@@ -75,6 +75,8 @@ class ViewController: UIViewController {
             case .success(let arrayFetched) :
                 //if data is fetched succefully, collectionView  is reloaded
                 self.saltSideListViewModel.saltsideList = arrayFetched
+                
+                //UI elements are updated in main thread
                 DispatchQueue.main.async { [weak self] in
                     self?.errorHandlingViews(shouldBeHidden: true)
                     self?.activityIndicator.isHidden = false
@@ -120,6 +122,14 @@ extension ViewController : UITableViewDataSource{
         
         let cell : SaltsideTableViewCell = tableView.dequeueReusableCell(withIdentifier: "saltsideTableViewCell", for: indexPath) as! SaltsideTableViewCell
         
+        //Setting accessibility identifiers
+        cell.accessibilityIdentifier = "saltsideTableViewCell"
+        
+        cell.saltsideTitleLabel.accessibilityIdentifier = "label--cellTitleLabel"
+        
+        cell.saltsideDescriptionLabel.accessibilityIdentifier = "label--cellDescriptionLabel"
+        
+        //accessing data at cell index and populating its values
         let dataAtCellIndex = saltSideListViewModel.saltsideList[indexPath.row]
 
         if dataAtCellIndex.title != nil{
@@ -144,10 +154,16 @@ extension ViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        //data at the present index is fetched
         let dataAtCellIndex = saltSideListViewModel.saltsideList[indexPath.row]
+        
+        //Load the detail view controller and populate it with the data at that index
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let dataDetailVC = storyboard.instantiateViewController(withIdentifier: "SaltSideDetailViewController") as! SaltsideDetailViewController
         dataDetailVC.saltsideDetailViewModel.detailModel = dataAtCellIndex
+        
+        //Navigate to the detail view controller
         dataDetailVC.isModalInPresentation = true
         self.navigationController?.pushViewController(dataDetailVC, animated: true)
         
