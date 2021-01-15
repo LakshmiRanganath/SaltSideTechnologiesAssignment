@@ -23,30 +23,30 @@ class CacheImageView : UIImageView{
         //Check if the image with urlstring is present in cache, if present fetch from cache else, fetch image from urlString and save in lrucache
         if imageCache.isValid(key: urlString){
             self.image = imageCache.get(urlString) as? UIImage
+            return
         }
-        else{
-            URLSession.shared.dataTask(with: url!){(data, response, error) in
-                if error != nil{
-                    print(error?.localizedDescription ?? "Error occured while fetching image from url")
-                    return
+        
+        URLSession.shared.dataTask(with: url!){(data, response, error) in
+            if error != nil{
+                print(error?.localizedDescription ?? "Error occured while fetching image from url")
+                return
+            }
+            if data == nil{
+                print("No data found")
+                return
+            }
+            guard let imageToCache = UIImage(data: data!) else{
+                print("Error occured while fetchimng image from url \(urlString)")
+                return
+            }
+            imageCache.put(urlString, imageToCache)
+        
+            DispatchQueue.main.async {[weak self] in
+                if self?.imageUrlString == urlString{
+                    self?.image = imageToCache
                 }
-                if data == nil{
-                    print("No data found")
-                    return
-                }
-                guard let imageToCache = UIImage(data: data!) else{
-                    print("Error occured while fetchimng image from data")
-                    return
-                }
-                imageCache.put(urlString, imageToCache)
-            
-                DispatchQueue.main.async {[weak self] in
-                    if self?.imageUrlString == urlString{
-                        self?.image = imageToCache
-                    }
-                }
-            }.resume()
-        }
+            }
+        }.resume()
         
         
     }
