@@ -40,9 +40,10 @@ class SaltsideLRUCache<K : Hashable, V> {
         if let existingNode = elementsInCache[key]{
             existingNode.value = value
             moveNodeToHeadOfCache(nodeToMove: existingNode)
+            return
         }
         // Add node to cache if countOfElementsInCache is less than cache capacity
-        else if countOfElementsInCache < capacity {
+        if countOfElementsInCache < capacity {
             let newNode = SaltsideLinkNode(key, value)
             
             if let prevHead = self.head {
@@ -58,14 +59,17 @@ class SaltsideLRUCache<K : Hashable, V> {
             }
             elementsInCache[key] = newNode
             countOfElementsInCache += 1
+            
+            return
         }
         // else Replace least-used key i.e., tail and move the replaced tail element to head
-        else if let nodeToReplaceTail = self.tail {
+        if let nodeToReplaceTail = self.tail {
             elementsInCache[nodeToReplaceTail.key] = nil
             nodeToReplaceTail.key = key
             nodeToReplaceTail.value = value
             elementsInCache[key] = nodeToReplaceTail
             moveNodeToHeadOfCache(nodeToMove: nodeToReplaceTail)
+            return
         }
     }
     
